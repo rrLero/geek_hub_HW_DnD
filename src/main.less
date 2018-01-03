@@ -1,0 +1,39 @@
+.products {
+  display: flex;
+  border: 1px solid black;
+}
+
+.product {
+  border: 1px solid #ccc;
+  & ~ .product {
+    margin-left: 15px;
+  }
+  &__header {
+    background-color: #cecece;
+    padding: 10px;
+    cursor: -webkit-grabbing;
+    user-select: none;
+  }
+  &__content {
+    padding: 10px;
+  }
+  &__dragging {
+    opacity: 0.5;
+  }
+}
+
+.cart {
+  margin-top: 20px;
+  border: 1px solid black;
+  min-height: 100px;
+  padding: 10px;
+  display: flex;
+}
+
+body > [data-drag-helper] {
+  position: absolute;
+}
+
+.overlaps {
+  border-color: red;
+}
